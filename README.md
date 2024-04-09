@@ -1,27 +1,25 @@
-## YOLOv8 Root Detection
+**YoloV8_Hairroot_Detector**
 
-This repository contains code for training a YOLOv8 model on custom datasets for root detection.
+**Overview**
+This project utilizes a custom-trained YoloV8 model to detect hair roots in images accurately. It's designed to assist in the analysis and tracking of hair follicle roots, providing precise data for research or medical purposes.
 
-### Steps to Train the Model:
-1. **Model Initialization:** 
-    Initialize YOLOv8 using the provided pretrained weights (`yolov8s.pt`).
-    ```
-    from ultralytics import YOLO
-    model = YOLO("best.pt")
-    ```
+**Features**
+Custom YoloV8 Model: Trained on a specialized dataset for high accuracy in hair root detection.
+Flask Web Application: An easy-to-use interface for uploading images and viewing detection results.
+Interactive Results: Results are displayed directly on the web page, allowing for immediate analysis.
 
-2. **Custom Dataset Setup:**
-    - Set the path to your custom dataset in the training configuration file (`data.yaml`).
-  
-3. **Model Training:**
-    Train the model with your dataset for a specified number of epochs (e.g., 30).
-    ```
-    model.train(data="C:/Users/Admin/Desktop/yolov8Root-Detection/datasets/data.yaml", epochs=30)
-    ```
-4. **Import Modules:**
-    pip install -r requirement.txt
+**Installation**
+Clone the repository.
+Install dependencies: pip install -r requirements.txt.
+Run the Flask app: python app.py.
 
-5. **For Running the root_detector.py**
-    python3 root_detector.py 
-    open any browser and enter 
-    localhost:8080
+**Usage**
+Access the web interface via localhost:5000 or the specified port.
+Upload an image through the web interface.
+View detected hair roots overlaid on the uploaded image.
+
+**Files**
+best.pt: The trained model file.
+app.py: The Flask application.
+index.html: The front-end HTML file.
+requirements.txt: Required Python libraries.
